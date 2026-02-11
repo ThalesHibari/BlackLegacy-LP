@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 import { Button } from "./button";
+import { BorderBeam } from "./border-beam"
 
 const pricingColumnVariants = cva(
   "max-w-container relative flex flex-col gap-6 overflow-hidden rounded-2xl p-8 shadow-xl",
@@ -26,7 +27,7 @@ const pricingColumnVariants = cva(
 
 export interface PricingColumnProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof pricingColumnVariants> {
+  VariantProps<typeof pricingColumnVariants> {
   name: string;
   icon?: ReactNode;
   description: string;
@@ -135,6 +136,18 @@ export function PricingColumn({
           ))}
         </ul>
       </div>
+      <BorderBeam
+        duration={6}
+        size={400}
+        className="from-transparent via-red-500 to-transparent"
+      />
+      <BorderBeam
+        duration={6}
+        delay={3}
+        size={400}
+        borderWidth={2}
+        className="from-transparent via-blue-500 to-transparent"
+      />
     </div>
   );
 }

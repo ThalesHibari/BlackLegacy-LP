@@ -17,7 +17,7 @@ function ItemTitle({ className, ...props }: React.ComponentProps<"h3">) {
     <h3
       data-slot="item-title"
       className={cn(
-        "text-sm leading-none font-semibold tracking-tight sm:text-base",
+        "text-md leading-none font-semibold tracking-tight sm:text-lg",
         className,
       )}
       {...props}
@@ -30,7 +30,7 @@ function ItemDescription({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="item-description"
       className={cn(
-        "text-muted-foreground flex max-w-[240px] flex-col gap-2 text-sm text-balance",
+        "text-muted-foreground flex flex-col gap-2 text-md font-regular text-balance",
         className,
       )}
       {...props}
@@ -48,4 +48,4 @@ function ItemIcon({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-export { Item, ItemDescription,ItemIcon, ItemTitle };
+export { Item, ItemDescription, ItemIcon, ItemTitle };

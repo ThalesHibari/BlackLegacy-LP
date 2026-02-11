@@ -34,36 +34,27 @@ interface FooterProps {
 
 export default function FooterSection({
   logo = <LaunchUI />,
-  name = "Launch UI",
   columns = [
     {
-      title: "Product",
+      title: "Empresas",
       links: [
-        { text: "Changelog", href: siteConfig.url },
-        { text: "Documentation", href: siteConfig.url },
+        { text: "Black Legacy", href: siteConfig.url },
+        { text: "Legacy Group", href: siteConfig.url },
       ],
     },
     {
-      title: "Company",
+      title: "Contato",
       links: [
-        { text: "About", href: siteConfig.url },
-        { text: "Careers", href: siteConfig.url },
-        { text: "Blog", href: siteConfig.url },
-      ],
-    },
-    {
-      title: "Contact",
-      links: [
-        { text: "Discord", href: siteConfig.url },
-        { text: "Twitter", href: siteConfig.url },
-        { text: "Github", href: siteConfig.links.github },
+        { text: "LinkedIn", href: siteConfig.url },
+        { text: "Instagram", href: siteConfig.url },
+        { text: "Facebook", href: siteConfig.url },
       ],
     },
   ],
-  copyright = "© 2025 Mikołaj Dobrucki. All rights reserved",
+  copyright = "© 2026 LegacyGroup. Todos os direitos reservados",
   policies = [
-    { text: "Privacy Policy", href: siteConfig.url },
-    { text: "Terms of Service", href: siteConfig.url },
+    { text: "Política de Privacidade", href: siteConfig.url },
+    { text: "Termos de Uso", href: siteConfig.url },
   ],
   showModeToggle = true,
   className,
@@ -76,7 +67,6 @@ export default function FooterSection({
             <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
               <div className="flex items-center gap-2">
                 {logo}
-                <h3 className="text-xl font-bold">{name}</h3>
               </div>
             </FooterColumn>
             {columns.map((column, index) => (

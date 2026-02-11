@@ -71,38 +71,46 @@
     from {
       height: 0;
     }
+
     to {
       height: var(--radix-accordion-content-height);
     }
   }
+
   @keyframes accordion-up {
     from {
       height: var(--radix-accordion-content-height);
     }
+
     to {
       height: 0;
     }
   }
+
   @keyframes appear {
     0% {
       opacity: 0;
       transform: translateY(1rem);
       filter: blur(0.5rem);
     }
+
     50% {
       filter: blur(0);
     }
+
     100% {
       opacity: 1;
       transform: translateY(0);
       filter: blur(0);
     }
   }
+
   @keyframes appear-zoom {
     0% {
       opacity: 0;
       transform: scale(0.5);
     }
+
     100% {
       opacity: 1;
       transform: scale(1);
@@ -161,8 +169,8 @@
 
 .dark {
   /* Accent colors */
-  --brand: oklch(83.6% 0.1177 66.87);
-  --brand-foreground: oklch(75.77% 0.159 55.91);
+  --brand: oklch(0.8711 0.0055 286.29);
+  --brand-foreground: oklch(0.5517 0.0138 285.94);
 
   /* Customized shadcn/ui colors */
   --background: oklch(0.141 0.005 285.823);
@@ -211,6 +219,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

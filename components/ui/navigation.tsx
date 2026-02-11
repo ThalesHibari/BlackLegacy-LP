@@ -7,7 +7,6 @@ import { ReactNode } from "react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-import LaunchUI from "../logos/launch-ui";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -68,28 +67,6 @@ export default function Navigation({
       href: siteConfig.url,
     },
   ],
-  logo = <LaunchUI />,
-  logoTitle = "Launch UI",
-  logoDescription = "Landing page template built with React, Shadcn/ui and Tailwind that you can copy/paste into your project.",
-  logoHref = siteConfig.url,
-  introItems = [
-    {
-      title: "Introduction",
-      href: siteConfig.url,
-      description:
-        "Re-usable components built using Radix UI and Tailwind CSS.",
-    },
-    {
-      title: "Installation",
-      href: siteConfig.url,
-      description: "How to install dependencies and structure your app.",
-    },
-    {
-      title: "Typography",
-      href: siteConfig.url,
-      description: "Styles for headings, paragraphs, lists...etc",
-    },
-  ],
 }: NavigationProps) {
   return (
     <NavigationMenu className="hidden md:flex">
@@ -104,41 +81,7 @@ export default function Navigation({
                 <Link href={item.href || ""}>{item.title}</Link>
               </NavigationMenuLink>
             ) : (
-              <>
-                <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  {item.content === "default" ? (
-                    <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                      <li className="row-span-3">
-                        <NavigationMenuLink asChild>
-                          <a
-                            className="from-muted/30 to-muted/10 flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                            href={logoHref}
-                          >
-                            {logo}
-                            <div className="mt-4 mb-2 text-lg font-medium">
-                              {logoTitle}
-                            </div>
-                            <p className="text-muted-foreground text-sm leading-tight">
-                              {logoDescription}
-                            </p>
-                          </a>
-                        </NavigationMenuLink>
-                      </li>
-                      {introItems.map((intro, i) => (
-                        <ListItem key={i} href={intro.href} title={intro.title}>
-                          {intro.description}
-                        </ListItem>
-                      ))}
-                    </ul>
-                  ) : item.content === "components" ? (
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    </ul>
-                  ) : (
-                    item.content
-                  )}
-                </NavigationMenuContent>
-              </>
+              <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
             )}
           </NavigationMenuItem>
         ))}

@@ -24,11 +24,11 @@ interface FAQProps {
 }
 
 export default function FAQ({
-  title = "Questions and Answers",
+  title = "Perguntas Frequentes",
   items = [
     {
       question:
-        "Why building a great landing page is critical for your business?",
+        "Para quem a Black Legacy é indicada?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
@@ -43,7 +43,7 @@ export default function FAQ({
       ),
     },
     {
-      question: "Why use Launch UI instead of a no-code tool?",
+      question: "O que é o Legacy Insights e como ele me ajuda?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[600px]">
@@ -66,7 +66,7 @@ export default function FAQ({
     },
     {
       question:
-        "How Launch UI is different from other components libraries and templates?",
+        "Existe um investimento mínimo recomendado em tráfego?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
@@ -86,7 +86,7 @@ export default function FAQ({
       ),
     },
     {
-      question: 'Why exactly does it mean that "The code is yours"?',
+      question: "Como funciona o processo de início (Onboarding)?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
@@ -110,7 +110,7 @@ export default function FAQ({
       ),
     },
     {
-      question: "Are Figma files included?",
+      question: "O traqueamento resolve a perda de dados do iOS/Cookies?",
       answer: (
         <p className="text-muted-foreground mb-4 max-w-[580px]">
           Yes! The complete Launch UI template is available for free on the{" "}
@@ -125,7 +125,7 @@ export default function FAQ({
       ),
     },
     {
-      question: "Can I get a discount?",
+      question: "Como funciona o desenvolvimento de sistemas On Demand?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">

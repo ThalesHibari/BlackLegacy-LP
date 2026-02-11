@@ -14,6 +14,7 @@ import {
 } from "../../ui/navbar";
 import Navigation from "../../ui/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
+import { HoverBorderGradient } from "../../ui/hover-border-gradient";
 
 interface NavbarLink {
   text: string;
@@ -77,17 +78,15 @@ export default function Navbar({
           <NavbarRight>
             {actions.map((action, index) =>
               action.isButton ? (
-                <Button
+                <HoverBorderGradient
                   key={index}
-                  variant={action.variant || "default"}
-                  asChild
                 >
                   <a href={action.href}>
                     {action.icon}
                     {action.text}
                     {action.iconRight}
                   </a>
-                </Button>
+                </HoverBorderGradient>
               ) : (
                 <a
                   key={index}

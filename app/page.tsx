@@ -8,6 +8,7 @@ import Navbar from "../components/sections/navbar/default";
 import Pricing from "../components/sections/pricing/default";
 import Stats from "../components/sections/stats/default";
 import { LayoutLines } from "../components/ui/layout-lines";
+import About from "../components/sections/about/default";
 
 export default function Home() {
   return (
@@ -15,10 +16,9 @@ export default function Home() {
       <LayoutLines />
       <Navbar />
       <Hero />
-      <Logos />
-      <Items />
+      <About />
       <Stats />
-      <Pricing />
+      <Items />
       <FAQ />
       <CTA />
       <Footer />
